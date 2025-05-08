@@ -1,45 +1,100 @@
-<!DOCTYPE html><html lang="uk">
+<!DOCTYPE html>
+<html lang="uk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alfar | Колекція цифрових марок</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Alfar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #1f1f1f;
+      position: relative;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #444;
+      cursor: pointer;
+    }
+
+    .menu {
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      background-color: #1f1f1f;
+      border: 1px solid #444;
+      border-radius: 8px;
+      display: none;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+
+    .menu a:hover {
+      background-color: #333;
+    }
+
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content h1 {
+      font-size: 2rem;
+    }
+
+    .book-access {
+      margin-top: 20px;
+    }
+
+    .book-access a {
+      color: #0af;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="logo">Alfar</div>
-    <div class="profile-menu">
-      <img src="avatar.png" alt="Avatar" class="avatar" onclick="toggleMenu()" />
-      <ul id="dropdown" class="hidden">
-        <li><a href="#collection">Моя колекція</a></li>
-        <li><a href="#favorites">Вподобане</a></li>
-        <li><a href="#market">Ринок</a></li>
-        <li><a href="#register">Реєстрація</a></li>
-        <li><a href="#login">Вхід</a></li>
-        <li><a href="#logout">Вихід</a></li>
-      </ul>
+    <div class="avatar" onclick="toggleMenu()"></div>
+    <div class="menu" id="menu">
+      <a href="#">Моя колекція</a>
+      <a href="#">Вподобане</a>
+      <a href="#">Ринок</a>
+      <a href="#">Реєстрація</a>
+      <a href="#">Вхід</a>
+      <a href="#">Вихід</a>
     </div>
-  </header>  <main>
-    <section class="welcome">
-      <h1>Ласкаво просимо до Alfar</h1>
-      <p>Увійдіть у світ легендарних цифрових марок</p>
-      <a href="#books" class="button">Переглянути електронні книги</a>
-      <a href="#register" class="button">Приєднатися до спільноти</a>
-    </section><section id="books" class="books-section">
-  <h2>Електронні книги</h2>
-  <div class="book-list">
-    <!-- Тут будуть мініатюри книг -->
-    <div class="book-item">Книга 1</div>
-    <div class="book-item">Книга 2</div>
-  </div>
-</section>
+  </header>
 
-  </main>  <footer>
-    <p>© 2025 Alfar. Всі права захищено.</p>
-  </footer>  <script>
+  <div class="content">
+    <h1>Вітаємо у світі Alfar</h1>
+    <div class="book-access">
+      <p>Ознайомтесь з <a href="#">електронними книгами</a>, щоб розкрити історію колекції</p>
+    </div>
+  </div>
+
+  <script>
     function toggleMenu() {
-      const menu = document.getElementById('dropdown');
-      menu.classList.toggle('hidden');
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
     }
-  </script></body>
+  </script>
+</body>
 </html>

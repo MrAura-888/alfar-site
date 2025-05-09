@@ -1,0 +1,23 @@
+<style>
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    background-color: #333;
+    margin: 0;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Serif', serif;
+    padding: 8px 12px;
+    display: block;
+  }
+
+  nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+  }
+</style>
